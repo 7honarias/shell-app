@@ -1,0 +1,176 @@
+.remote-component-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  gap: 1rem;
+  color: #667eea;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(102, 126, 234, 0.1);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.remote-component-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 2rem;
+}
+
+.remote-component-error__content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #e74c3c;
+}
+
+.remote-component-error__title {
+  color: #e74c3c;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.remote-component-error__message {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.remote-component-error__message strong {
+  color: #333;
+  font-family: monospace;
+  background: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.remote-component-error__details {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.remote-component-error__details p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.remote-component-error__details pre {
+  margin: 0;
+  padding: 0.5rem;
+  background: #2d3748;
+  color: #f7fafc;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+}
+
+.remote-component-error__help {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.remote-component-error__help p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.remote-component-error__help ul {
+  margin: 0.5rem 0 0 1.5rem;
+  color: #555;
+}
+
+.remote-component-error__help li {
+  margin-bottom: 0.5rem;
+}
+
+.remote-component-error__button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.remote-component-error__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.remote-component-error__button:active {
+  transform: translateY(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .remote-component-loading {
+    color: #9fa8da;
+  }
+
+  .remote-component-error__content {
+    background: #1a202c;
+    border-left-color: #fc8181;
+  }
+
+  .remote-component-error__title {
+    color: #fc8181;
+  }
+
+  .remote-component-error__message {
+    color: #e2e8f0;
+  }
+
+  .remote-component-error__message strong {
+    color: #f7fafc;
+    background: #2d3748;
+  }
+
+  .remote-component-error__details {
+    background: #2d3748;
+  }
+
+  .remote-component-error__details p {
+    color: #e2e8f0;
+  }
+
+  .remote-component-error__help {
+    background: #1e3a5f;
+  }
+
+  .remote-component-error__help p {
+    color: #63b3ed;
+  }
+
+  .remote-component-error__help ul {
+    color: #e2e8f0;
+  }
+}
